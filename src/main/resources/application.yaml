@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: restful-practice
+  jackson:
+    default-property-inclusion: non_null
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: f0f2ef4d-ef19-481d-ab05-501dc330e78f
+server:
+  port: 8747
+
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+      subscribed-services: "*"
